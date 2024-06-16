@@ -48,6 +48,6 @@ export class LeaseCalculatorService {
         document.getElementById('total_down_payment').textContent = `Down payment: $${downPayment.toFixed(2)}`;
         document.getElementById('total_leasing').textContent = `Total Leasing Cost: $${totalLeasingCost.toFixed(2)}`;
         document.getElementById('total_monthly_installment').textContent = `Monthly installment: $${monthlyInstallment.toFixed(2)}`;
-        document.getElementById('total_interest_rate').textContent = `Interest rate: $${this.getInterestRate().toFixed(2)}`;
+        document.getElementById('total_interest_rate').textContent = `Interest rate: ${this.getInterestRate().toFixed(2)}%`;
     }
 }
