@@ -11,4 +11,11 @@ A simple yet convenient and user friendly lease calculator. To use it you need t
  - for further expanding of components simply create a new folder for the desired component inside
 
 ## Innit folder
- - inside the `innit` folder we have **InputsEvenInnit**
+ - inside the `innit` folder we have `InputsEvenInnit` which is solely responsible for the responsive output of the information
+ - it contains all the event listeners, values and non-business logic
+ - the second file is `LeaseCalculatorService` which is responsible for the business logic
+ - it contains methods to get all the values and do calculations with them
+ - calculates down payment, total leasing, monthly installment
+
+## Index.js file
+ - Runs the script when the document loads
