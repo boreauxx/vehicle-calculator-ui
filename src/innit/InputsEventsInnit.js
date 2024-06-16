@@ -16,10 +16,10 @@ export class InputsEventsInnit {
 
     // Event listeners to keep input and range in sync
     this.carValueRange.addEventListener('input', this.updateCarValueInput.bind(this));
-    this.carValueInput.addEventListener('input', this.updateCarValueRange.bind(this));
+    this.carValueInput.addEventListener('change', this.updateCarValueRange.bind(this));
 
     this.downPaymentRange.addEventListener('input', this.updateDownPaymentInput.bind(this));
-    this.downPaymentInput.addEventListener('input', this.updateDownPaymentRange.bind(this));
+    this.downPaymentInput.addEventListener('change', this.updateDownPaymentRange.bind(this));
 
     this.registerCalculationListeners();
   }
@@ -29,13 +29,7 @@ export class InputsEventsInnit {
     this.leaseCalculatorService.calculateAndDisplay();
   }
 
-  updateCarValueRange(event) {
-    if (event.inputType === 'deleteContentBackward' || event.key === 'Backspace') {
-      return;
-    }
-    if(this.carValueInput.value.toString().length < 5){
-      return;
-    }
+  updateCarValueRange() {
     let input = parseInt(this.carValueInput.value);
     if (input < 10000) {
       input = 10000;
@@ -52,13 +46,7 @@ export class InputsEventsInnit {
     this.leaseCalculatorService.calculateAndDisplay();
   }
 
-  updateDownPaymentRange(event) {
-    if (event.inputType === 'deleteContentBackward' || event.key === 'Backspace') {
-      return;
-    }
-    if(this.downPaymentInput.value.toString().length < 2){
-      return;
-    }
+  updateDownPaymentRange() {
     let input = parseInt(this.downPaymentInput.value);
     if (input > 50) {
       input = 50;
