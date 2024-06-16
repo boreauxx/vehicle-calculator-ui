@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rental Calculator</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+
+    <h1>Car Leasing Calculator</h1>
+
+    <div class="calc">
+
+      <section class="calc-sec">
+        <div>
+          <label for="vehicle_type">Car Type:</label>
+          <select id="vehicle_type">
+            <option>Brand new</option>
+            <option>Used</option>
+          </select>
+        </div>
+        <div>
+          <label for="car_value">Car Value ($10,000 - $200,000):</label>
+          <input type="text" id="car_value"/>
+        </div>
+        <div>
+          <input type="range" min="10000" max="200000" id="car_value_range"/>
+        </div>
+      </section>
+
+      <section class="calc-sec">
+        <div>
+          <label for="lease_period">Lease Period (months):</label>
+          <select id="lease_period">
+            <option>12</option>
+            <option>24</option>
+            <option>36</option>
+            <option>48</option>
+            <option>60</option>
+          </select>
+        </div>
+        <div>
+          <label for="down_payment">Down Payment (10% - 50%):</label>
+          <input type="text" id="down_payment">
+        </div>
+        <div>
+          <input type="range" min="10" max="50" id="down_payment_range"/>
+        </div>
+      </section>
+
+    </div>
+
+    <span id="horizontal-line"></span>
+
+    <h1>Leasing Details</h1>
+
+    <div class="output">
+
+          <section class="output-sec">
+            <p id="total_leasing">Total Leasing Cost: $128,  408.32</p>
+            <p id="total_down_payment">Down payment: $120,000.00</p>
+          </section>
+
+          <span id="vertical-line"></span>
+
+          <section class="output-sec">
+            <p id="total_monthly_installment">Monthly installment: $1940.14</p>
+            <p id="total_interest_rate"></p>
+          </section>
+
+      </div>
+
+  </div>
+
+  <script src="../index.js" type="module"> </script>
+
+</body>
+</html>
