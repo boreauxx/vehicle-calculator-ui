@@ -1,0 +1,95 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 660px;
+  width: 940px;
+  gap: 24px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 12px;
+  outline: 5px solid rgb(200, 200, 200);
+}
+
+#container h1 {
+  font-size: 42px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#container .calc{
+  display: flex;
+  gap: 96px;
+}
+
+#container .calc-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#container .calc-sec > div {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 8px;
+}
+
+#container .calc-sec > div > label{
+  font-size: 28px;
+}
+
+#container .calc-sec > div > select {
+  background: initial;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 4px;
+  height: 40px;
+  font-size: 16px;
+  text-indent: 4px;
+
+}
+
+#container .calc-sec > div > input {
+  background: initial;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 4px;
+  height: 34px;
+  font-size: 16px;
+  text-indent: 12px;
+}
+
+#container .output {
+  display: flex;
+  gap: 84px;
+  padding: 12px 36px 12px 36px;
+}
+
+#container .output-sec > div{
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 4px;
+}
+
+#container .output-sec > p{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#horizontal-line {
+  width: 790px;
+  border: 1px solid black;
+  margin: 24px 0 24px 12px;
+}
+
+#vertical-line {
+  height: 60px;
+  border: 1px solid black;
+}
