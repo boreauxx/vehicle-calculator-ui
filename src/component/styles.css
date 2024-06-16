@@ -51,6 +51,7 @@ body {
 
 #container .calc-sec > div > label{
   font-size: 1.75rem;
+  /*white-space: nowrap;*/
 }
 
 #container .calc-sec > div > select {
@@ -77,11 +78,11 @@ body {
   padding: 1rem 2rem;
 }
 
-#container .output-sec > div{
+#container .output-sec {
   display: flex;
   flex-direction: column;
   padding: 0.25rem;
-  gap: 0.25rem;
+  gap: 0.4rem;
 }
 
 #container .output-sec > p{
